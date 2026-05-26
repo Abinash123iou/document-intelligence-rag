@@ -39,13 +39,54 @@ document-intelligence-rag/
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Upload.jsx
-│   │   │   ├── Search.jsx
-│   │   │   ├── Chat.jsx
-│   │   │   └── Navbar.jsx
+│   │   │   ├── layout/
+│   │   │   │   ├── Sidebar.jsx
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   └── DashboardLayout.jsx
+│   │   │   │
+│   │   │   ├── dashboard/
+│   │   │   │   ├── StatsCard.jsx
+│   │   │   │   ├── UploadBox.jsx
+│   │   │   │   ├── ActivityList.jsx
+│   │   │   │   ├── CategoryChart.jsx
+│   │   │   │   └── TrendChart.jsx
+│   │   │   │
+│   │   │   ├── documents/
+│   │   │   │   ├── DocumentCard.jsx
+│   │   │   │   ├── DocumentGrid.jsx
+│   │   │   │   └── DocumentFilters.jsx
+│   │   │   │
+│   │   │   ├── chat/
+│   │   │   │   ├── ChatWindow.jsx
+│   │   │   │   ├── MessageBubble.jsx
+│   │   │   │   ├── CitationCard.jsx
+│   │   │   │   └── SuggestedQuestions.jsx
+│   │   │   │
+│   │   │   ├── search/
+│   │   │   │   ├── SearchBar.jsx
+│   │   │   │   ├── SearchResults.jsx
+│   │   │   │   └── ChunkPreview.jsx
+│   │   │   │
+│   │   │   ├── settings/
+│   │   │   │   └── ThemeToggle.jsx
+│   │   │   │
+│   │   │   └── ui/
+│   │   │       ├── Button.jsx
+│   │   │       ├── Card.jsx
+│   │   │       ├── Input.jsx
+│   │   │       ├── Badge.jsx
+│   │   │       └── Loader.jsx
 │   │   │
 │   │   ├── pages/
-│   │   │   └── Home.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Documents.jsx
+│   │   │   ├── ChatPage.jsx
+│   │   │   ├── SearchPage.jsx
+│   │   │   ├── Analytics.jsx
+│   │   │   └── Settings.jsx
+│   │   │
+│   │   ├── context/
+│   │   │   └── ThemeContext.jsx
 │   │   │
 │   │   ├── services/
 │   │   │   └── api.js
@@ -66,9 +107,19 @@ document-intelligence-rag/
 │   │   └── rag_service.py
 │   │
 │   ├── routes/
+│   │   ├── upload_routes.py
+│   │   ├── search_routes.py
+│   │   ├── chat_routes.py
+│   │   └── analytics_routes.py
+│   │
+│   ├── models/
+│   │   ├── document_models.py
+│   │   └── query_models.py
+│   │
 │   └── main.py
 │
 ├── vector_store/
 ├── data/
-└── README.md
-```
+├── prompts/
+├── README.md
+└── .gitignore

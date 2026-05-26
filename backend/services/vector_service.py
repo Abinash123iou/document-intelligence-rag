@@ -9,12 +9,14 @@ import json
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+VECTOR_STORE_DIR = os.getenv("VECTOR_STORE_DIR", "vector_store")
+
 # FAISS index and metadata storage paths
-INDEX_PATH = "vector_store/faiss_index.bin"
-METADATA_PATH = "vector_store/metadata.json"
+INDEX_PATH = os.path.join(VECTOR_STORE_DIR, "faiss_index.bin")
+METADATA_PATH = os.path.join(VECTOR_STORE_DIR, "metadata.json")
 
 # Ensure the vector_store directory exists
-os.makedirs("vector_store", exist_ok=True)
+os.makedirs(VECTOR_STORE_DIR, exist_ok=True)
 
 dimension = 384  # Dimension for 'all-MiniLM-L6-v2'
 index = None

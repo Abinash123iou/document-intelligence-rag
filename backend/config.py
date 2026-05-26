@@ -8,5 +8,7 @@ if os.path.exists(backend_env):
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-# Vector store configuration
-VECTOR_STORE_PATH = "vector_store/faiss_index.bin"
+# Runtime storage configuration
+VECTOR_STORE_DIR = os.getenv("VECTOR_STORE_DIR", "vector_store")
+UPLOAD_DIR = os.getenv("UPLOAD_DIR", "backend/uploads")
+VECTOR_STORE_PATH = os.path.join(VECTOR_STORE_DIR, "faiss_index.bin")

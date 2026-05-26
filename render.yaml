@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: document-intelligence-rag-api
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: FRONTEND_ORIGINS
+        value: http://localhost:5173
+      - key: FRONTEND_ORIGIN_REGEX
+        value: "^https?://(localhost|127\\.0\\.0\\.1|\\[::1\\])(:\\d+)?$|^https://.*\\.vercel\\.app$"
+      - key: VECTOR_STORE_DIR
+        value: vector_store
+      - key: UPLOAD_DIR
+        value: backend/uploads

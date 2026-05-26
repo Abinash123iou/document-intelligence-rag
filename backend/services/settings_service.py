@@ -2,7 +2,8 @@ import json
 import os
 from typing import Any
 
-SETTINGS_PATH = "vector_store/settings.json"
+VECTOR_STORE_DIR = os.getenv("VECTOR_STORE_DIR", "vector_store")
+SETTINGS_PATH = os.path.join(VECTOR_STORE_DIR, "settings.json")
 
 DEFAULT_LLM_SETTINGS = {
     "provider": "groq",
@@ -20,7 +21,7 @@ DEFAULT_EMBEDDING_SETTINGS = {
 
 DEFAULT_VECTOR_DB_SETTINGS = {
     "engine": "faiss",
-    "host": "local://vector_store/faiss_index.bin",
+    "host": f"local://{os.path.join(VECTOR_STORE_DIR, 'faiss_index.bin')}",
     "api_key": "",
 }
 

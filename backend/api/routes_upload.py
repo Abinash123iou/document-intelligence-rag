@@ -8,6 +8,7 @@ from datetime import datetime
 import os
 import time
 from pathlib import Path
+from backend.config import UPLOAD_DIR
 
 router = APIRouter()
 
@@ -64,7 +65,7 @@ async def upload_document(file: UploadFile = File(...)):
             error_code="UNSUPPORTED_FILE"
         )
 
-    upload_dir = "backend/uploads"
+    upload_dir = UPLOAD_DIR
     if not os.path.exists(upload_dir):
         os.makedirs(upload_dir)
         

@@ -3,7 +3,8 @@ import os
 from datetime import datetime, timedelta
 from typing import Any
 
-ACTIVITY_PATH = "vector_store/activity_log.json"
+VECTOR_STORE_DIR = os.getenv("VECTOR_STORE_DIR", "vector_store")
+ACTIVITY_PATH = os.path.join(VECTOR_STORE_DIR, "activity_log.json")
 
 
 def _load_events() -> list[dict[str, Any]]:

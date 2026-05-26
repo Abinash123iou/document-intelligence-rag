@@ -2,12 +2,13 @@ from fastapi import APIRouter, HTTPException
 
 from backend.models.schemas import EmbeddingSettings, LLMSettings, MaintenanceResponse, VectorDBSettings
 from backend.services import classification_service, chunk_service, document_service, embed_service, settings_service, vector_service
+from backend.config import UPLOAD_DIR as CONFIG_UPLOAD_DIR
 from pathlib import Path
 import time
 
 router = APIRouter()
 
-UPLOAD_DIR = Path("backend/uploads").resolve()
+UPLOAD_DIR = Path(CONFIG_UPLOAD_DIR).resolve()
 MIME_TYPE_BY_FILE_TYPE = {
     "pdf": "application/pdf",
     "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",

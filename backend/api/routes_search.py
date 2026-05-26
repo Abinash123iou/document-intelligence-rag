@@ -14,6 +14,7 @@ from backend.services import activity_service, classification_service, document_
 import logging
 from datetime import datetime
 import time
+from backend.config import UPLOAD_DIR as CONFIG_UPLOAD_DIR
 
 router = APIRouter()
 
@@ -21,7 +22,7 @@ router = APIRouter()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-UPLOAD_DIR = Path("backend/uploads").resolve()
+UPLOAD_DIR = Path(CONFIG_UPLOAD_DIR).resolve()
 MEDIA_TYPES = {
     "pdf": "application/pdf",
     "docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",

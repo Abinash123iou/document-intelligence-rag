@@ -318,7 +318,7 @@ For a placement or portfolio project, it highlights practical full-stack AI skil
 
 ## Demo
 
-- Live Demo: [Open App](httpsh://your-app.vercel.app)
+- Live Demo: [Open App](https://document-intelligence-rag.vercel.app/)
 - Demo Video: [Watch Demo](https://www.loom.com/share/ace0f95142a84df199a3c7a19e6a49b6)
 ---
 

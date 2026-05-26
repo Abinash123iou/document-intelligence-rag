@@ -327,7 +327,7 @@ For a placement or portfolio project, it highlights practical full-stack AI skil
 ## Author
 
 **Abinash A**  
-Information Technology Engineering Student  
+Information Technology Student  
 Vel Tech Tech Multi Tech Engineering College
 
 - GitHub: [https://github.com/Abinash123iou](https://github.com/your-username)

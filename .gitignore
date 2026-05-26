@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend_old/node_modules/
+.venv/
+frontend_old/
+
+# Build output
+dist/
+frontend/dist/
+frontend_old/dist/
+.vite/
+frontend/.vite/
+
+# Local environment
+.env
+*.env
+backend/.env
+*.local
+
+# Runtime data
+vector_store/*
+!vector_store/.gitkeep
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Logs and caches
+logs/
+*.log
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

@@ -25,6 +25,8 @@ FRONTEND_ORIGINS=https://your-vercel-app.vercel.app,http://localhost:5173
 FRONTEND_ORIGIN_REGEX=^https?://(localhost|127\.0\.0\.1|\[::1\])(:\d+)?$|^https://.*\.vercel\.app$
 VECTOR_STORE_DIR=vector_store
 UPLOAD_DIR=backend/uploads
+EMBEDDING_PROVIDER=hash
+EMBEDDING_DIMENSION=384
 ```
 
 After deploy, your API base URL will look like:
@@ -62,7 +64,17 @@ For production, use one of these:
 - S3-compatible file storage for uploads
 - Qdrant, Pinecone, Weaviate, or another hosted vector database
 
-## 4. Security Note
+## 4. Embedding Mode
+
+The Render Free instance has only 512 MB RAM. The deployed backend defaults to:
+
+```text
+EMBEDDING_PROVIDER=hash
+```
+
+This avoids loading PyTorch/Sentence Transformers on the free instance. For stronger semantic quality, use a larger Render instance and install `sentence-transformers`, or move embeddings/vector search to a hosted provider.
+
+## 5. Security Note
 
 Do not commit `.env` files. Set secrets only in Render/Vercel environment variables.
 

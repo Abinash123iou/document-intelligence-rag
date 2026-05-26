@@ -16,3 +16,7 @@ services:
         value: vector_store
       - key: UPLOAD_DIR
         value: backend/uploads
+      - key: EMBEDDING_PROVIDER
+        value: hash
+      - key: EMBEDDING_DIMENSION
+        value: "384"

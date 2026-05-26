@@ -275,8 +275,6 @@ Screenshots of the DocIntel AI dashboard are available in the Google Drive folde
 
 [View Dashboard Screenshots](https://drive.google.com/drive/folders/1AOds55r-iYUrFsEGSPmHLn2k1pJmzYUf?usp=sharing)
 
-<img width="1920" height="912" alt="Image" src="https://github.com/user-attachments/assets/4f95568f-56a1-407f-a14a-1ecc94f95e8f" />
-
 
 ## Edge Cases
 

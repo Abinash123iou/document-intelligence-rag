@@ -268,6 +268,21 @@ These example tasks reflect the PRD’s goal of semantic retrieval and context-a
 
 ---
 
+## API Documentation
+
+The DocIntel AI backend is built with FastAPI and exposes interactive API documentation using Swagger UI and OpenAPI.
+
+### Local (Development)
+
+- Swagger UI: http://localhost:8000/docs
+- ReDoc: http://localhost:8000/redoc
+- OpenAPI schema: http://localhost:8000/openapi.json
+
+### Production (Live Backend)
+
+- Swagger UI: https://docintel-backend-8nqr.onrender.com/docs
+- OpenAPI schema: https://docintel-backend-8nqr.onrender.com/openapi.json
+
 ## Screenshots
 ## DocIntel Dashboard
 
